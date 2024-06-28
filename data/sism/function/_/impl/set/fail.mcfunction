@@ -4,6 +4,5 @@
 #--------------------
 
 data remove storage sism:in set
-scoreboard players reset *set.path -sism
-scoreboard players reset *set.slot -sism
+data remove storage sism:var verify
 return 0
