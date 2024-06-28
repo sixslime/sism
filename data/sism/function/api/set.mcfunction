@@ -14,6 +14,7 @@
 # 0 - invalid <item.Slot> value for <path>.
 #--------------------
 
+execute unless data storage sism:in set.item.components run data modify storage sism:in set.item.components set value {}
 data modify storage sism:var verify set from storage sism:in set
 execute unless function sism:_/verify/o run return run function sism:_/impl/set/fail
 
