@@ -16,9 +16,9 @@
 
 execute unless data storage sism:in set.item.components run data modify storage sism:in set.item.components set value {}
 data modify storage sism:var verify set from storage sism:in set
-execute unless function sism:_/verify/o run return run function sism:_/impl/set/fail
+execute unless function sism:api/convert_path run return run function sism:_/impl/set/fail
 
-data modify storage sism:var verify.out merge from storage sism:in set.item
+data modify storage sism:out convert_path.result merge from storage sism:in set.item
 function sism:_/impl/set/do with storage sism:var verify.out
 
 data remove storage sism:var verify
