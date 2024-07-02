@@ -2,6 +2,6 @@
 ItemPathArg {
     category: $
     slot: $
-} WHERE [
+} : [
     `item replace entity @s $(category)$(slot) with air`
 ]
