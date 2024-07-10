@@ -19,7 +19,7 @@ data modify storage sism:var verify set from storage sism:in set
 execute unless function sism:api/convert_path run return run function sism:_/impl/set/fail
 
 data modify storage sism:out convert_path.result merge from storage sism:in set.item
-function sism:_/impl/set/do with storage sism:var verify.out
+function sism:_/impl/set/do with storage sism:out convert_path.result
 
 data remove storage sism:var verify
 data remove storage sism:in set
