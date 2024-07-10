@@ -23,14 +23,14 @@ execute unless score *convert_path.path -sism matches 1..2 run return run functi
 execute if score *convert_path.path -sism matches 1 unless score *convert_path.slot -sism matches 0..35 unless score *convert_path.slot -sism matches 100..103 unless score *convert_path.slot -sism matches -106 run return run function sism:_/impl/convert_path/fail
 execute if score *convert_path.path -sism matches 2 unless score *convert_path.slot -sism matches 0..26 run return run function sism:_/impl/convert_path/fail
 
-execute if score *convert_path.slot -sism matches 0..35 run data modify storage sism:out convert_path.category set value "container."
-execute if score *convert_path.path -sism matches 2 run data modify storage sism:out convert_path.category set value "enderchest."
-execute if score *convert_path.slot -sism matches 0..35 store result storage sism:out convert_path.slot int 1 run scoreboard players get *convert_path.slot -sism
-execute if score *convert_path.slot -sism matches 100..103 run data modify storage sism:out convert_path.category set value "armor."
-execute if score *convert_path.slot -sism matches 100 run data modify storage sism:out convert_path.slot set value "feet"
-execute if score *convert_path.slot -sism matches 101 run data modify storage sism:out convert_path.slot set value "legs"
-execute if score *convert_path.slot -sism matches 102 run data modify storage sism:out convert_path.slot set value "chest"
-execute if score *convert_path.slot -sism matches 103 run data modify storage sism:out convert_path.slot set value "head"
+execute if score *convert_path.slot -sism matches 0..35 run data modify storage sism:out convert_path.result.category set value "container."
+execute if score *convert_path.path -sism matches 2 run data modify storage sism:out convert_path.result.category set value "enderchest."
+execute if score *convert_path.slot -sism matches 0..35 store result storage sism:out convert_path.result.slot int 1 run scoreboard players get *convert_path.slot -sism
+execute if score *convert_path.slot -sism matches 100..103 run data modify storage sism:out convert_path.result.category set value "armor."
+execute if score *convert_path.slot -sism matches 100 run data modify storage sism:out convert_path.result.slot set value "feet"
+execute if score *convert_path.slot -sism matches 101 run data modify storage sism:out convert_path.result.slot set value "legs"
+execute if score *convert_path.slot -sism matches 102 run data modify storage sism:out convert_path.result.slot set value "chest"
+execute if score *convert_path.slot -sism matches 103 run data modify storage sism:out convert_path.result.slot set value "head"
 execute if score *convert_path.slot -sism matches -106 run data merge storage sism:out {convert_path:{category:"weapon.", slot:"offhand"}}
 
 data remove storage sism:in convert_path
