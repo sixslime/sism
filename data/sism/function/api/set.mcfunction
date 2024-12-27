@@ -6,12 +6,12 @@
 #--------------------
 # ...
 #--------------------
-#> emulates the would-be behavior of `data modify entity [player] <path> append value <item>`.
+#> emulates the would-be behavior of `data modify entity @s <path> append value <item>`.
 #--------------------
-#- in other words, replaces [player]'s <item.slot> in <path> with <item>.
+#- in other words, replaces @s's <item.slot> in <path> with <item>.
 #--------------------
 # 1 - success
-# 0 - invalid <item.Slot> value for <path>.
+# 0 - invalid <item.slot> value for <path>.
 #--------------------
 
 execute unless data storage sism:in set.item.components run data modify storage sism:in set.item.components set value {}
