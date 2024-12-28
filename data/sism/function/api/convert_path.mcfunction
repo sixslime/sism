@@ -31,7 +31,7 @@ execute if score *convert_path.slot -sism matches 100 run data modify storage si
 execute if score *convert_path.slot -sism matches 101 run data modify storage sism:out convert_path.result.slot set value "legs"
 execute if score *convert_path.slot -sism matches 102 run data modify storage sism:out convert_path.result.slot set value "chest"
 execute if score *convert_path.slot -sism matches 103 run data modify storage sism:out convert_path.result.slot set value "head"
-execute if score *convert_path.slot -sism matches -106 run data merge storage sism:out {convert_path:{category:"weapon.", slot:"offhand"}}
+execute if score *convert_path.slot -sism matches -106 run data merge storage sism:out {convert_path:{result:{category:"weapon.", slot:"offhand"}}}
 
 data remove storage sism:in convert_path
 scoreboard players reset *convert_path.path -sism 
